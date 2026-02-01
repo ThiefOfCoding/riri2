@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gomi</title>
+
+  <!-- Cute fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Comfortaa:wght@300;400;600;700&family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Animated cute background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__wallpaper"></div>
+    <div class="bg__sparkle"></div>
+    <div class="bg__vignette"></div>
+  </div>
+
+  <!-- Landing gate -->
+  <section id="gate" class="gate" aria-label="Enter gate">
+    <div class="gate__portal" aria-hidden="true">
+      <div class="portal portal--a"></div>
+      <div class="portal portal--b"></div>
+      <div class="portal portal--c"></div>
+      <div class="portal__stickers">
+        <span class="sticker">♡</span>
+        <span class="sticker">✿</span>
+        <span class="sticker">★</span>
+        <span class="sticker">♡</span>
+        <span class="sticker">✿</span>
+      </div>
+    </div>
+
+    <div class="gate__card">
+      <div class="gate__title">Gomi</div>
+      <div class="gate__sub"></div>
+
+      <button id="enterBtn" class="enterBtn" type="button">
+        <span class="enterBtn__txt">Enter</span>
+        <span class="enterBtn__pulse" aria-hidden="true"></span>
+      </button>
+
+      <div class="gate__note">La MamiChula</div>
+    </div>
+  </section>
+
+  <!-- Main space -->
+  <main id="space" class="space is-hidden" aria-label="Profile space">
+    <div class="stage" id="stage">
+      <!-- floating ribbons -->
+      <div class="ribbon ribbon--l" aria-hidden="true"></div>
+      <div class="ribbon ribbon--r" aria-hidden="true"></div>
+
+      <!-- sticker collage layout (NO glass) -->
+      <section class="collage" aria-label="Profile collage">
+        <!-- top badge -->
+        <div class="badge">
+          <span class="badge__spark" aria-hidden="true"></span>
+          <span class="badge__txt">Una bad bitch girl de los noventas</span>
+          <span class="badge__spark" aria-hidden="true"></span>
+        </div>
+
+        <!-- center: avatar + name -->
+        <div class="hero">
+          <div class="frame frame--scallop" aria-hidden="true"></div>
+
+          <div class="avatarWrap">
+            <img class="avatar" src="https://xatimg.com/image/P4OwFp1fvAwd.jpg" alt="Profile picture" />
+            <div class="bow bow--top" aria-hidden="true"></div>
+          </div>
+
+          <h1 class="name">Zay ♥</h1>
+          <div class="zodiac">Gemini ♊</div>
+
+          <a class="linkpill" href="https://xat.com/saoko" target="_blank" rel="noopener noreferrer">
+            Saoko <span class="linkpill__star" aria-hidden="true">★</span>
+          </a>
+
+          <div class="subtext">La MamiChula</div>
+
+          <div class="ctaRow">
+            <button id="photosBtn" class="btn btn--photos" type="button">
+              <span aria-hidden="true">📷</span> Photos
+            </button>
+            <button id="burstBtn" class="btn btn--burst" type="button" title="Cute burst">
+              <span aria-hidden="true">💗</span> Sparkle
+            </button>
+          </div>
+        </div>
+
+        <!-- left: friends "bubble chain" -->
+        <aside class="friends" aria-label="Friends list">
+          <div class="panelTitle">Friends ♡</div>
+          <div class="friends__chain">
+
+            <!-- UPDATED: each friend is now a clickable link -->
+            <a class="friend" href="https://xat.me/kiti" target="_blank" rel="noopener noreferrer" aria-label="Teki link">
+              <img src="https://xatimg.com/image/aagJUBhnNz69.jpg" alt="Teki" />
+              <span>Teki</span>
+            </a>
+
+            <a class="friend" href="https://xat.me/fran" target="_blank" rel="noopener noreferrer" aria-label="Franco link">
+              <img src="https://xatimg.com/image/5VJRUGDdugWo.jpg" alt="Franco" />
+              <span>Franco</span>
+            </a>
+
+            <a class="friend" href="https://xat.me/Xpiitu" target="_blank" rel="noopener noreferrer" aria-label="Pitu link">
+              <img src="https://xatimg.com/image/UIynWYUjK5QT.jpg" alt="Pitu" />
+              <span>Pitu</span>
+            </a>
+
+            <a class="friend" href="https://xat.me/ELV1S" target="_blank" rel="noopener noreferrer" aria-label="Elvis link">
+              <img src="https://xatimg.com/image/R8AEG39WhJ6F.jpg" alt="Elvis" />
+              <span>Elvis</span>
+            </a>
+
+            <a class="friend" href="https://xat.me/Epika" target="_blank" rel="noopener noreferrer" aria-label="Epika link">
+              <img src="https://xatimg.com/image/LSHdXCogAEZN.jpg" alt="Epika" />
+              <span>Epika</span>
+            </a>
+
+          </div>
+        </aside>
+
+        <!-- right: cute “memory” note -->
+        <aside class="note" aria-label="Cute note">
+          <div class="panelTitle">😈</div>
+          <p class="note__text">
+            Más perra que el filtro de Snapchat, solo yo supero mi racha<br />
+            
+          </p>
+          <div class="note__stickers" aria-hidden="true">
+            <span>♡</span><span>✿</span><span>★</span><span>♡</span><span>✿</span>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <!-- Gallery overlay (polaroid wall) -->
+  <section id="gallery" class="gallery is-hidden" aria-label="Photo gallery">
+    <div class="gallery__top">
+      <div class="gallery__title">Photos ✨</div>
+      <button id="closeGallery" class="xbtn" type="button" aria-label="Close gallery">✕</button>
+    </div>
+
+    <div class="polaroids" aria-label="Gallery grid">
+      <figure class="polaroid" data-tilt>
+        <img src="https://xatimg.com/image/NXDV8j6DaDJ8.jpg" alt="Gallery photo 1" />
+        <figcaption>♡</figcaption>
+        <button class="zoomBtn" type="button">Zoom</button>
+      </figure>
+
+      <figure class="polaroid" data-tilt>
+        <img src="https://xatimg.com/image/qBcedKdAbGxO.jpg" alt="Gallery photo 2" />
+        <figcaption>✿</figcaption>
+        <button class="zoomBtn" type="button">Zoom</button>
+      </figure>
+
+      <figure class="polaroid" data-tilt>
+        <img src="https://xatimg.com/image/Rvm8H7SfSTMw.jpg" alt="Gallery photo 3" />
+        <figcaption>★</figcaption>
+        <button class="zoomBtn" type="button">Zoom</button>
+      </figure>
+
+      <figure class="polaroid" data-tilt>
+        <img src="https://xatimg.com/image/QG88LuknaxF5.jpg" alt="Gallery photo 4" />
+        <figcaption>♡</figcaption>
+        <button class="zoomBtn" type="button">Zoom</button>
+      </figure>
+    </div>
+
+    <div class="gallery__bottom">
+      <button id="backToProfile" class="btn btn--back" type="button">
+        ↩ Back
+      </button>
+    </div>
+  </section>
+
+  <!-- Zoom modal -->
+  <div id="zoomModal" class="zoom is-hidden" aria-label="Zoomed photo">
+    <div class="zoom__backdrop" id="zoomBackdrop" aria-hidden="true"></div>
+    <div class="zoom__wrap">
+      <img id="zoomImg" src="" alt="Zoomed photo" />
+      <button id="zoomClose" class="xbtn xbtn--float" type="button" aria-label="Close zoom">✕</button>
+    </div>
+  </div>
+
+  <!-- Music + visible YouTube video widget (bottom-right) -->
+  <aside class="player" aria-label="Music and video player">
+    <div class="player__head">
+      <div class="player__brand">
+        <span class="player__icon">♪</span>
+        <div>
+          <div class="player__title">Princess Music</div>
+          <div class="player__sub">video is visible ✨</div>
+        </div>
+      </div>
+
+      <button id="toggleVideo" class="miniBtn" type="button" aria-label="Hide/show video">▾</button>
+    </div>
+
+    <div id="videoWrap" class="player__video">
+      <div class="player__frame">
+        <div id="yt"></div>
+      </div>
+    </div>
+
+    <div class="player__controls">
+      <button id="playBtn" class="ctl" type="button" aria-label="Play/Pause">▶</button>
+      <button id="muteBtn" class="ctl" type="button" aria-label="Mute/Unmute">🔊</button>
+      <input id="vol" class="vol" type="range" min="0" max="100" value="65" aria-label="Volume" />
+    </div>
+  </aside>
+
+  <!-- YouTube Iframe API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
